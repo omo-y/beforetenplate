@@ -1,6 +1,7 @@
 import { PrimaryBotton } from "./components/atoms/button/PrimaryBotton";
 import { SecondaryBotton } from "./components/atoms/button/SecondaryBotton";
 import { UserCard } from "./components/organisms/user/UserCard";
+import { HeaderOnly } from "./components/templates/HeaderOnly";
 import { SearchInput } from "./molecules/Searchinput";
 import "./styles.css";
 const user = {
@@ -16,7 +17,7 @@ const user = {
 
 export default function App() {
   return (
-    <div className="App">
+    <HeaderOnly>
       <PrimaryBotton>テスト</PrimaryBotton>
       <SecondaryBotton>試験</SecondaryBotton>
       <br />
@@ -24,6 +25,6 @@ export default function App() {
       <SearchInput />
 
       <UserCard user={user} />
-    </div>
+    </HeaderOnly>
   );
 }
